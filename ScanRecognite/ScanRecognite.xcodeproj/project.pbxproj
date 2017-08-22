@@ -15,6 +15,8 @@
 		0328DF421F4BD5FE00CD0A28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0328DF401F4BD5FE00CD0A28 /* LaunchScreen.storyboard */; };
 		0328DF4D1F4BD5FF00CD0A28 /* ScanRecogniteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328DF4C1F4BD5FF00CD0A28 /* ScanRecogniteTests.m */; };
 		0328DF581F4BD5FF00CD0A28 /* ScanRecogniteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328DF571F4BD5FF00CD0A28 /* ScanRecogniteUITests.m */; };
+		0328DF681F4C062300CD0A28 /* ScanRecogniteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */; };
+		0328DF691F4C062300CD0A28 /* ScanRecogniteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		0328DF531F4BD5FF00CD0A28 /* ScanRecogniteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanRecogniteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0328DF571F4BD5FF00CD0A28 /* ScanRecogniteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanRecogniteUITests.m; sourceTree = "<group>"; };
 		0328DF591F4BD5FF00CD0A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0328DF651F4C062300CD0A28 /* ScanRecogniteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRecogniteVC.h; sourceTree = "<group>"; };
+		0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanRecogniteVC.m; sourceTree = "<group>"; };
+		0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanRecogniteVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				0328DF361F4BD5FE00CD0A28 /* AppDelegate.m */,
 				0328DF381F4BD5FE00CD0A28 /* ViewController.h */,
 				0328DF391F4BD5FE00CD0A28 /* ViewController.m */,
+				0328DF651F4C062300CD0A28 /* ScanRecogniteVC.h */,
+				0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */,
+				0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */,
 				0328DF3B1F4BD5FE00CD0A28 /* Main.storyboard */,
 				0328DF3E1F4BD5FE00CD0A28 /* Assets.xcassets */,
 				0328DF401F4BD5FE00CD0A28 /* LaunchScreen.storyboard */,
@@ -251,6 +259,7 @@
 			files = (
 				0328DF421F4BD5FE00CD0A28 /* LaunchScreen.storyboard in Resources */,
 				0328DF3F1F4BD5FE00CD0A28 /* Assets.xcassets in Resources */,
+				0328DF691F4C062300CD0A28 /* ScanRecogniteVC.xib in Resources */,
 				0328DF3D1F4BD5FE00CD0A28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +287,7 @@
 			files = (
 				0328DF3A1F4BD5FE00CD0A28 /* ViewController.m in Sources */,
 				0328DF371F4BD5FE00CD0A28 /* AppDelegate.m in Sources */,
+				0328DF681F4C062300CD0A28 /* ScanRecogniteVC.m in Sources */,
 				0328DF341F4BD5FE00CD0A28 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
