@@ -11,6 +11,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVFoundation.h>
 
+//http://www.jianshu.com/p/5860087c8981
 
 #define kLog(str) NSLog(@"hbj<<<%d<<<%@", __LINE__, str)
 #define kScreenHeight  [UIScreen mainScreen].bounds.size.height
@@ -33,8 +34,23 @@
 //图像预览层，实时显示捕获的图像
 @property (nonatomic ,strong) AVCaptureVideoPreviewLayer *previewLayer;
 
+//背景图片
+@property (nonatomic, strong) UIImageView *bgImageView;
+
 //展示捕获的场景
 @property (nonatomic, strong) UIImageView *imageView;
+
+//扫图滚动辅助线
+@property (nonatomic, strong) UIImageView *lineView;
+
+//判断辅助线滚动方向
+@property (nonatomic, assign) BOOL downDirection;
+
+//定时器辅助线的滚动效果
+@property (nonatomic, strong) NSTimer *timer;
+
+//记录展示层rect
+@property (nonatomic, assign) CGRect rectFrame;
 
 @end
 
@@ -48,6 +64,59 @@
     [self initCameraDistrict];
    
 }
+
+
+/*创建扫描滚动提示线*/
+- (UIImageView *)lineView {
+    if (_lineView == nil) {
+        _lineView = [[UIImageView alloc] init];
+        _lineView.frame = CGRectMake(self.rectFrame.origin.x + 8, self.rectFrame.origin.y + 3, self.rectFrame.size.width - 8 * 2, 3);
+        _lineView.image = [UIImage imageNamed:@"scanLine.png"];
+        _lineView.backgroundColor = [UIColor clearColor];
+        self.downDirection = YES;
+        [self.timer setFireDate:[NSDate date]];
+    }
+    return _lineView;
+}
+
+- (NSTimer *)timer {
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(animationLineView) userInfo:nil repeats:YES];
+    }
+    return _timer;
+}
+/*上下滚动效果*/
+- (void)animationLineView {
+    if (self.downDirection) {
+        CGRect lineFrame = self.lineView.frame;
+        lineFrame.origin.y += 4;
+        self.lineView.frame = lineFrame;
+        if (CGRectGetMaxY(self.lineView.frame) > self.rectFrame.origin.y + self.rectFrame.size.height) {
+            self.downDirection = !_downDirection;
+        }
+    } else {
+        CGRect lineFrame = self.lineView.frame;
+        lineFrame.origin.y -= 4;
+        self.lineView.frame = lineFrame;
+        if (self.lineView.frame.origin.y < self.rectFrame.origin.y) {
+            self.downDirection = !_downDirection;
+        }
+        
+    }
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+}
+
+- (void)dealloc {
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+
 //返回上一级按钮
 - (IBAction)backAction:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -61,6 +130,11 @@
 - (void)initCameraDistrict
 {
     [self.view.layer addSublayer:self.previewLayer];
+     [self.view addSubview:self.lineView];
+    self.bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.rectFrame.origin.x - 5, self.rectFrame.origin.y - 5, self.rectFrame.size.width + 5 * 2, self.rectFrame.size.height + 5 * 2)];
+    self.bgImageView.image = [UIImage imageNamed:@"QRcode.png"];
+    self.bgImageView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.bgImageView];
 }
 //1.1获取硬件设备
 - (AVCaptureDevice *)device {
@@ -150,11 +224,15 @@
     if (_previewLayer == nil) {
         //预览层的生成
         _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-        _previewLayer.frame = CGRectMake(0, (kScreenHeight - 450)/2, kScreenWidth, 450);
+        CGRect rect = CGRectMake(15, (kScreenHeight - 450)/2, kScreenWidth - 15 * 2, 450);
+        _previewLayer.frame = rect;
+        self.rectFrame = rect;
         _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     }
     return _previewLayer;
 }
+
+
 
 //执行拍照
 - (void)photoBtnDidClick

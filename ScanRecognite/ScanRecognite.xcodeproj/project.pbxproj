@@ -17,6 +17,8 @@
 		0328DF581F4BD5FF00CD0A28 /* ScanRecogniteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328DF571F4BD5FF00CD0A28 /* ScanRecogniteUITests.m */; };
 		0328DF681F4C062300CD0A28 /* ScanRecogniteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */; };
 		0328DF691F4C062300CD0A28 /* ScanRecogniteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */; };
+		0350F8431F4D23D800270C39 /* scanLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F8421F4D23D800270C39 /* scanLine.png */; };
+		0350F8451F4D2C1F00270C39 /* QRcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F8441F4D2C1F00270C39 /* QRcode.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		0328DF651F4C062300CD0A28 /* ScanRecogniteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRecogniteVC.h; sourceTree = "<group>"; };
 		0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanRecogniteVC.m; sourceTree = "<group>"; };
 		0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanRecogniteVC.xib; sourceTree = "<group>"; };
+		0350F8421F4D23D800270C39 /* scanLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanLine.png; sourceTree = "<group>"; };
+		0350F8441F4D2C1F00270C39 /* QRcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRcode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */,
 				0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */,
 				0328DF3B1F4BD5FE00CD0A28 /* Main.storyboard */,
+				0350F8441F4D2C1F00270C39 /* QRcode.png */,
+				0350F8421F4D23D800270C39 /* scanLine.png */,
 				0328DF3E1F4BD5FE00CD0A28 /* Assets.xcassets */,
 				0328DF401F4BD5FE00CD0A28 /* LaunchScreen.storyboard */,
 				0328DF431F4BD5FE00CD0A28 /* Info.plist */,
@@ -260,7 +266,9 @@
 				0328DF421F4BD5FE00CD0A28 /* LaunchScreen.storyboard in Resources */,
 				0328DF3F1F4BD5FE00CD0A28 /* Assets.xcassets in Resources */,
 				0328DF691F4C062300CD0A28 /* ScanRecogniteVC.xib in Resources */,
+				0350F8431F4D23D800270C39 /* scanLine.png in Resources */,
 				0328DF3D1F4BD5FE00CD0A28 /* Main.storyboard in Resources */,
+				0350F8451F4D2C1F00270C39 /* QRcode.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +541,7 @@
 				0328DF5E1F4BD5FF00CD0A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0328DF5F1F4BD5FF00CD0A28 /* Build configuration list for PBXNativeTarget "ScanRecogniteTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +550,7 @@
 				0328DF611F4BD5FF00CD0A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0328DF621F4BD5FF00CD0A28 /* Build configuration list for PBXNativeTarget "ScanRecogniteUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +559,7 @@
 				0328DF641F4BD5FF00CD0A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
