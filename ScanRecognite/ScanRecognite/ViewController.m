@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ScanRecogniteVC.h"
+#import "QRCodeVC.h"
 
 @interface ViewController ()
 
@@ -31,6 +32,12 @@
 
 
 
+- (IBAction)clickQRcode:(UIButton *)sender {
+    QRCodeVC *scanVC = [[QRCodeVC alloc] init];
+    [self presentViewController:scanVC animated:YES completion:^{
+        NSLog(@"跳转到扫图界面");
+    }];
+}
 
 
 

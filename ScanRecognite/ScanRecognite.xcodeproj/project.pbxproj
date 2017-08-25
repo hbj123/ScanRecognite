@@ -19,6 +19,13 @@
 		0328DF691F4C062300CD0A28 /* ScanRecogniteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */; };
 		0350F8431F4D23D800270C39 /* scanLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F8421F4D23D800270C39 /* scanLine.png */; };
 		0350F8451F4D2C1F00270C39 /* QRcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F8441F4D2C1F00270C39 /* QRcode.png */; };
+		0350F8491F4D553F00270C39 /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350F8471F4D553F00270C39 /* QRCodeVC.m */; };
+		0350F84A1F4D553F00270C39 /* QRCodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0350F8481F4D553F00270C39 /* QRCodeVC.xib */; };
+		0350F8511F4D590800270C39 /* scan_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F84C1F4D590800270C39 /* scan_1.png */; };
+		0350F8521F4D590800270C39 /* scan_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F84D1F4D590800270C39 /* scan_2.png */; };
+		0350F8531F4D590800270C39 /* scan_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F84E1F4D590800270C39 /* scan_3.png */; };
+		0350F8541F4D590800270C39 /* scan_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F84F1F4D590800270C39 /* scan_4.png */; };
+		0350F8551F4D590800270C39 /* scan_net.png in Resources */ = {isa = PBXBuildFile; fileRef = 0350F8501F4D590800270C39 /* scan_net.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +67,14 @@
 		0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanRecogniteVC.xib; sourceTree = "<group>"; };
 		0350F8421F4D23D800270C39 /* scanLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanLine.png; sourceTree = "<group>"; };
 		0350F8441F4D2C1F00270C39 /* QRcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRcode.png; sourceTree = "<group>"; };
+		0350F8461F4D553F00270C39 /* QRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
+		0350F8471F4D553F00270C39 /* QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
+		0350F8481F4D553F00270C39 /* QRCodeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeVC.xib; sourceTree = "<group>"; };
+		0350F84C1F4D590800270C39 /* scan_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan_1.png; sourceTree = "<group>"; };
+		0350F84D1F4D590800270C39 /* scan_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan_2.png; sourceTree = "<group>"; };
+		0350F84E1F4D590800270C39 /* scan_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan_3.png; sourceTree = "<group>"; };
+		0350F84F1F4D590800270C39 /* scan_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan_4.png; sourceTree = "<group>"; };
+		0350F8501F4D590800270C39 /* scan_net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan_net.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +129,16 @@
 				0328DF361F4BD5FE00CD0A28 /* AppDelegate.m */,
 				0328DF381F4BD5FE00CD0A28 /* ViewController.h */,
 				0328DF391F4BD5FE00CD0A28 /* ViewController.m */,
+				0350F8461F4D553F00270C39 /* QRCodeVC.h */,
+				0350F8471F4D553F00270C39 /* QRCodeVC.m */,
+				0350F8481F4D553F00270C39 /* QRCodeVC.xib */,
 				0328DF651F4C062300CD0A28 /* ScanRecogniteVC.h */,
 				0328DF661F4C062300CD0A28 /* ScanRecogniteVC.m */,
 				0328DF671F4C062300CD0A28 /* ScanRecogniteVC.xib */,
 				0328DF3B1F4BD5FE00CD0A28 /* Main.storyboard */,
 				0350F8441F4D2C1F00270C39 /* QRcode.png */,
 				0350F8421F4D23D800270C39 /* scanLine.png */,
+				0350F84B1F4D590800270C39 /* 二维码图片 */,
 				0328DF3E1F4BD5FE00CD0A28 /* Assets.xcassets */,
 				0328DF401F4BD5FE00CD0A28 /* LaunchScreen.storyboard */,
 				0328DF431F4BD5FE00CD0A28 /* Info.plist */,
@@ -152,6 +171,18 @@
 				0328DF591F4BD5FF00CD0A28 /* Info.plist */,
 			);
 			path = ScanRecogniteUITests;
+			sourceTree = "<group>";
+		};
+		0350F84B1F4D590800270C39 /* 二维码图片 */ = {
+			isa = PBXGroup;
+			children = (
+				0350F84C1F4D590800270C39 /* scan_1.png */,
+				0350F84D1F4D590800270C39 /* scan_2.png */,
+				0350F84E1F4D590800270C39 /* scan_3.png */,
+				0350F84F1F4D590800270C39 /* scan_4.png */,
+				0350F8501F4D590800270C39 /* scan_net.png */,
+			);
+			path = "二维码图片";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +296,16 @@
 			files = (
 				0328DF421F4BD5FE00CD0A28 /* LaunchScreen.storyboard in Resources */,
 				0328DF3F1F4BD5FE00CD0A28 /* Assets.xcassets in Resources */,
+				0350F8551F4D590800270C39 /* scan_net.png in Resources */,
+				0350F8531F4D590800270C39 /* scan_3.png in Resources */,
+				0350F8511F4D590800270C39 /* scan_1.png in Resources */,
+				0350F84A1F4D553F00270C39 /* QRCodeVC.xib in Resources */,
 				0328DF691F4C062300CD0A28 /* ScanRecogniteVC.xib in Resources */,
 				0350F8431F4D23D800270C39 /* scanLine.png in Resources */,
 				0328DF3D1F4BD5FE00CD0A28 /* Main.storyboard in Resources */,
 				0350F8451F4D2C1F00270C39 /* QRcode.png in Resources */,
+				0350F8541F4D590800270C39 /* scan_4.png in Resources */,
+				0350F8521F4D590800270C39 /* scan_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0328DF3A1F4BD5FE00CD0A28 /* ViewController.m in Sources */,
+				0350F8491F4D553F00270C39 /* QRCodeVC.m in Sources */,
 				0328DF371F4BD5FE00CD0A28 /* AppDelegate.m in Sources */,
 				0328DF681F4C062300CD0A28 /* ScanRecogniteVC.m in Sources */,
 				0328DF341F4BD5FE00CD0A28 /* main.m in Sources */,
@@ -449,6 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U6ZTWS69D;
 				INFOPLIST_FILE = ScanRecognite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shizheng.ScanRecognite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,6 +503,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 6U6ZTWS69D;
 				INFOPLIST_FILE = ScanRecognite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shizheng.ScanRecognite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
